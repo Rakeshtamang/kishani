@@ -1,0 +1,6 @@
+<?php
+include("../connection.php");
+$sql = "UPDATE auction SET STATUS = 'declined' WHERE A_Id='".$_GET['aid']."'";
+$query = mysqli_query($connection,$sql);
+header('Location: adminpage.php');
+?>
